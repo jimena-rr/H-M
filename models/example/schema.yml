@@ -1,21 +1,29 @@
 
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: final_project_clean
+    tables:
+      - name: articles
+        columns:
+        - name: article_id
+          description: "Unique identifier for each article"
+          tests:
+          - not_null
+          - unique
+        - name: prod_name
+          tests:
+          - not_null
+        - name: product_group_name
+        - name: colour_group_name
+        - name: index_name
+        - name: index_group_name
+        - name: detail_desc
+      - name: transaction_train
+        columns:
+          - name: t_dat
+          - name: customer_id
+          - name: article_id
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+
+
