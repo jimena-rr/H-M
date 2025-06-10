@@ -1,4 +1,3 @@
-
 version: 2
 
 sources:
@@ -6,24 +5,22 @@ sources:
     tables:
       - name: articles
         columns:
-        - name: article_id
-          description: "Unique identifier for each article"
-          tests:
-          - not_null
-          - unique
-        - name: prod_name
-          tests:
-          - not_null
-        - name: product_group_name
-        - name: colour_group_name
-        - name: index_name
-        - name: index_group_name
-        - name: detail_desc
-      - name: transaction_train
+          - name: article_id
+            description: "Unique identifier for each article"
+            tests:
+              - not_null
+              - unique
+          - name: prod_name
+            tests:
+              - not_null
+          - name: product_group_name
+          - name: colour_group_name
+          - name: index_name
+          - name: index_group_name
+          - name: detail_desc
+      - name: transactions
+        identifier: transaction_train
         columns:
           - name: t_dat
           - name: customer_id
           - name: article_id
-
-
-
